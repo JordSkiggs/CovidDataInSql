@@ -64,6 +64,7 @@ ORDER BY TotalDeathCount DESC
 -- GLOBAL NUMBERS
 
 -- Global Cases, Deaths and Death Percantage per Date
+
 SELECT date,SUM(new_cases) AS TotalCases,SUM(CAST(new_deaths AS int )) AS TotalDeaths, SUM(CAST(new_deaths AS int ))/SUM(new_cases)*100 AS DeathPercantage
 FROM PORTFOLIOPROJECT..CovidDeaths
 WHERE continent IS NOT NULL
